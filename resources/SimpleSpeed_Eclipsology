@@ -2,13 +2,11 @@ local players = game:GetService("Players")
 
 local function bypassWalkSpeed()
     if getgenv().executed then
-        print("Walkspeed Already Bypassed - Applying Settings Changes")
         if not getgenv().Enabled then
             return
         end
     else
         getgenv().executed = true
-        print("Walkspeed Bypassed")
 
         local mt = getrawmetatable(game)
         setreadonly(mt, false)
